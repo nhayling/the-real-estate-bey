@@ -30,6 +30,7 @@ export default function MarketUpdates(props) {
                     onExpire={() => setToken(null)}
                     onError={() => setToken(null)}
                     theme="dark"
+                    appearance='interaction-only'
                 />
                 <button className={styles.button} disabled={!token || status === 'loading' || status === 'success'} onClick={handleSubmit}>
                     {status === 'loading' ? 'Subscribing…' : status === 'success' ? 'Subscribed!' : 'Get the monthly update'}
