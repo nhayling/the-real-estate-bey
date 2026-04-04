@@ -6,15 +6,25 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "dbReset": "npx prisma migrate reset --skip-seed -f",
+    "dbPush": "npx prisma db push",
+    "dbSeed": "npx prisma db seed",
     "lint": "eslint"
   },
   "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "joi": "^18.1.2",
     "next": "16.2.2",
+    "pg": "^8.20.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-turnstile": "^1.1.5",
+    "sass": "^1.99.0"
   },
   "devDependencies": {
+    "dotenv": "^17.4.0",
     "eslint": "^9",
-    "eslint-config-next": "16.2.2"
+    "eslint-config-next": "16.2.2",
+    "prisma": "^5.22.0"
   }
 }

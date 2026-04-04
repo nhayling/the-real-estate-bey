@@ -1,0 +1,40 @@
+@use 'variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+  --color-bg: #{$slate-lm-2};
+  --color-bg-subtle: #{$slate-lm-2};
+  --color-bg-raised: #{$slate-lm-1};
+}
+
+[data-theme="dark"] {
+  --color-bg: #{$slate-dm-2};
+  --color-bg-subtle: #{$slate-dm-2};
+  --color-bg-raised: #{$slate-dm-1};
+  --color-text-on-bg-raised: #{$slate-dm-12};
+  --color-text-on-bg-raised-subtle: #{$slate-dm-11};
+  --color-text-on-bg-subtle: #{$slate-dm-10};
+  --color-border: #{$slate-dm-5};
+  --color-accent: #F79E5C;
+  --color-accent-hover: #C35809;
+  --color-text-on-accent: #{$slate-dm-1};
+
+  // whatsapp colors
+  --color-text-whatsapp-secondary: #37763F;
+  --color-text-whatsapp-primary: #51B560;
+  --color-bg-whatsapp: #131C13;
+  --color-border-whatsapp: #254929;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}

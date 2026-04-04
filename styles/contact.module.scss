@@ -1,0 +1,49 @@
+@use 'variables' as *;
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 15px;
+    border-top: 1px solid var(--color-border);
+
+    .title {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text-on-bg-subtle);
+        pointer-events: none;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        // padding: 20px;
+    
+        .section {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+    
+        .label {
+            font-size: 12px;
+            font-weight: 400;
+            color: var(--color-text-on-bg-subtle);
+            pointer-events: none;
+        }
+    
+        .value {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--color-text-on-bg-raised);
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

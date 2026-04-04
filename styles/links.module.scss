@@ -1,0 +1,124 @@
+@use 'variables' as *;
+
+.links {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border-top: 1px solid var(--color-border);
+    width: 100%;
+
+    .title {
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text-on-bg-subtle);
+        pointer-events: none;
+    }
+
+    a {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        text-decoration: none;
+    }
+
+    .card {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid var(--color-border);
+        border-radius: 5px;
+        padding: 10px 15px;
+        gap: 10px;
+        background-color: var(--color-bg-subtle);
+        align-items: center;
+        // justify-content: space-between;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .title {
+                font-size: 16px;
+                font-weight: 500;
+                color: var(--color-text-on-bg-raised);
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 400;
+                color: var(--color-text-on-bg-raised-subtle);
+            }
+        }
+
+        .icon {
+            margin-left: auto;
+            font-size: 20px;
+            height: 24px;
+            width: 24px;
+            color: var(--color-text-on-bg-subtle);
+        }
+    }
+
+    .card.whatsapp {
+        background-color: var(--color-bg-whatsapp);
+        border-color: var(--color-border-whatsapp);
+
+        .svg {
+            fill: var(--color-text-whatsapp-primary);
+        }
+
+        .content {
+            margin-left: 5px;
+        }
+
+        .title {
+            color: var(--color-text-whatsapp-primary);
+        }
+
+        p {
+            color: var(--color-text-whatsapp-secondary);
+        }
+
+        .icon {
+            color: var(--color-text-whatsapp-secondary);
+        }
+    }
+
+    .card.featured {
+        border-color: var(--color-accent);
+        background-color: color-mix(in srgb, var(--color-accent) 10%, transparent);
+
+        .content {
+            margin-left: 5px;
+        }
+
+        .title {
+            color: var(--color-accent);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .badge {
+                margin-left: 10px;
+                font-size: 10px;
+                font-weight: 500;
+                color: var(--color-text-on-accent);
+                background-color: var(--color-accent);
+                padding: 2px 6px;
+                border-radius: 3px;
+            }
+        }
+
+        p {
+            // color: var(--color-text-on-bg-raised);
+        }
+
+        .icon {
+            color: var(--color-accent);
+        }
+    }
+}
