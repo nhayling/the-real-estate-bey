@@ -6,6 +6,7 @@ import Links from "@/components/Links";
 import MarketUpdates from "@/components/MarketUpdates";
 import Head from "next/head";
 import styles from '../styles/main.module.scss';
+import Socials from "@/components/SocialMedia";
 
 export default function Home() {
   return (
@@ -39,6 +40,7 @@ export default function Home() {
           <Hero />
           <Links />
           <MarketUpdates />
+          <Socials />
           <Contact />
           <Footer />
         </div>
